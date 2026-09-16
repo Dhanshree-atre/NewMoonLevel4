@@ -107,3 +107,13 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   )
 }
+
+// Padding increased
+
+// Justify items center
+
+// Padding increased
+
+// Justify items center
+
+// Padding increased
