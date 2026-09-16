@@ -200,3 +200,17 @@ export function validatePayrollPeriod(period: Partial<PayrollPeriod>): string[] 
   if (!period.adminKey) errors.push('Admin key is required')
   return errors
 }
+
+export const formatHash = (hash: string) => hash.slice(0, 8) + '...' + hash.slice(-8);
+
+// Formatting helper for currency
+
+export const formatUSD = (val: number) => '$' + val.toFixed(2);
+
+export const formatHash = (hash: string) => hash.slice(0, 8) + '...' + hash.slice(-8);
+
+// Formatting helper for currency
+
+export const formatUSD = (val: number) => '$' + val.toFixed(2);
+
+export const formatHash = (hash: string) => hash.slice(0, 8) + '...' + hash.slice(-8);
