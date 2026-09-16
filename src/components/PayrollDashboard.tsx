@@ -36,3 +36,5 @@ const downloadPDF = () => { alert('PDF Downloaded!'); };
 const [zkState, setZkState] = useState<'idle' | 'compiling' | 'witness' | 'proving' | 'done'>('idle');
 
 const zkStateMessages = { idle: '', compiling: 'Compiling Circuit...', witness: 'Generating Witness...', proving: 'Creating Proof...', done: 'Complete!' };
+
+// Simulate phase transitions for UX
