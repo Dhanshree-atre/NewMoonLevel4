@@ -28,3 +28,5 @@ const zkStateMessages = { idle: '', compiling: 'Compiling Circuit...', witness: 
 // Spacing added
 
 // Adding a stub for PDF blob creation
+
+const downloadPDF = () => { alert('PDF Downloaded!'); };
