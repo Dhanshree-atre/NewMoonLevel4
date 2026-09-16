@@ -10,11 +10,8 @@ interface PayrollDashboardProps {
 
 function Card({ children, style = {} }: { children: React.ReactNode; style?: React.CSSProperties }) {
   return (
-    <div style={{
-      background: 'rgba(255,255,255,0.03)',
-      border: '1px solid rgba(99, 179, 237, 0.12)',
-      borderRadius: '16px',
-      padding: '24px',
+    <div className="glass-card animate-fade-in" style={{
+      marginBottom: '24px',
       ...style,
     }}>
       {children}

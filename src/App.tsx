@@ -11,22 +11,23 @@ function App() {
   return (
     <Layout>
       {/* NETWORK FALLBACK BANNER */}
-      <div style={{
-        background: 'rgba(234, 179, 8, 0.15)',
-        border: '1px solid rgba(234, 179, 8, 0.4)',
-        borderRadius: '8px',
-        padding: '12px 16px',
-        color: '#fef08a',
-        fontSize: '13px',
-        lineHeight: 1.5,
-        marginBottom: '24px',
+      <div className="animate-fade-in" style={{
+        background: 'linear-gradient(90deg, rgba(234, 179, 8, 0.1) 0%, rgba(234, 179, 8, 0.05) 100%)',
+        borderLeft: '4px solid #f59e0b',
+        borderRadius: '0 12px 12px 0',
+        padding: '16px 20px',
+        color: '#fde68a',
+        fontSize: '14px',
+        lineHeight: 1.6,
+        marginBottom: '40px',
         display: 'flex',
-        alignItems: 'flex-start',
-        gap: '12px'
+        alignItems: 'center',
+        gap: '16px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
       }}>
-        <div style={{ fontSize: '18px' }}>⚠️</div>
+        <div style={{ fontSize: '24px' }}>⚠️</div>
         <div>
-          <strong>Network Notice:</strong> Due to intermittent <code>wss://rpc.preprod.midnight.network</code> timeouts (1000 Closure) on the Midnight Preprod testnet, this UI is running in local ZK simulation mode to guarantee a smooth demo. 
+          <strong style={{ color: '#fbbf24' }}>Network Notice:</strong> Due to intermittent <code>wss://rpc.preprod.midnight.network</code> timeouts (1000 Closure) on the Midnight Preprod testnet, this UI is running in local ZK simulation mode to guarantee a smooth demo. 
           All ZK proving and verifying keys (<code>.vk</code>, <code>.pk</code>) have been successfully compiled and are included in the repository under <code>contracts/managed/shieldpay/keys/</code>.
         </div>
       </div>
@@ -37,36 +38,40 @@ function App() {
         onDisconnect={disconnectWallet}
       />
       {walletState.isConnected && (
-        <div style={{ marginTop: '24px' }}>
-          {/* Tab switcher */}
-          <div style={{
-            display: 'flex',
-            gap: '8px',
-            marginBottom: '24px',
-            background: 'rgba(255,255,255,0.05)',
-            borderRadius: '12px',
-            padding: '6px',
-          }}>
-            {(['admin', 'recipient'] as const).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                style={{
-                  flex: 1,
-                  padding: '10px 20px',
-                  borderRadius: '8px',
-                  fontWeight: 600,
-                  fontSize: '14px',
-                  transition: 'all 0.2s',
-                  background: activeTab === tab
-                    ? 'linear-gradient(135deg, #2563eb, #7c3aed)'
-                    : 'transparent',
-                  color: activeTab === tab ? '#fff' : '#94a3b8',
-                }}
-              >
-                {tab === 'admin' ? '🏢 Admin / Employer' : '👤 Recipient / Employee'}
-              </button>
-            ))}
+        <div className="animate-fade-in animate-delay-1" style={{ marginTop: '24px' }}>
+          
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
+            <h2 style={{ fontSize: '28px', margin: 0 }}>Payroll Dashboard</h2>
+            
+            {/* Tab switcher */}
+            <div style={{
+              display: 'inline-flex',
+              gap: '4px',
+              background: 'rgba(15, 23, 42, 0.6)',
+              border: '1px solid rgba(255,255,255,0.05)',
+              borderRadius: '12px',
+              padding: '6px',
+            }}>
+              {(['admin', 'recipient'] as const).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  style={{
+                    padding: '8px 20px',
+                    borderRadius: '8px',
+                    fontWeight: 600,
+                    fontSize: '14px',
+                    background: activeTab === tab
+                      ? 'linear-gradient(135deg, #4f46e5, #7c3aed)'
+                      : 'transparent',
+                    color: activeTab === tab ? '#fff' : '#94a3b8',
+                    boxShadow: activeTab === tab ? '0 4px 12px rgba(79, 70, 229, 0.3)' : 'none',
+                  }}
+                >
+                  {tab === 'admin' ? '🏢 Admin / Employer' : '👤 Recipient / Employee'}
+                </button>
+              ))}
+            </div>
           </div>
 
           <PayrollDashboard
