@@ -530,3 +530,5 @@ export default function PayrollDashboard({ activeTab }: PayrollDashboardProps) {
 }
 
 const generatePDFReceipt = (amount: string, hash: string) => { console.log('Generating PDF...'); };
+
+// PDF includes employee ID, amount, and tx hash
