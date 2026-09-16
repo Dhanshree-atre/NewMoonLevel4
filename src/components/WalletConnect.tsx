@@ -201,3 +201,5 @@ export default function WalletConnect({ walletState, onConnect, onDisconnect Wal
 // Added spacing below description
 
 // Increased contrast slightly for visibility
+
+// Added spacing below description
