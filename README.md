@@ -184,3 +184,10 @@ MIT — see [LICENSE](LICENSE)
 
 ---
 
+
+## Level 5 - User Validation
+- Target: 50 Preprod users
+- Current: 50 / 50 verified users
+- See USERS.md for wallet addresses
+- See docs/FEEDBACK.md for feedback log and changes
+
