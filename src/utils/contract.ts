@@ -216,3 +216,5 @@ export const formatUSD = (val: number) => '$' + val.toFixed(2);
 export const formatHash = (hash: string) => hash.slice(0, 8) + '...' + hash.slice(-8);
 
 // Formatting helper for currency
+
+export const formatUSD = (val: number) => '$' + val.toFixed(2);
