@@ -16,7 +16,7 @@
 
 | Network | Address |
 |---------|---------|
-| Preprod | **`02a4b9f8d7e6c5b4a3928172635445566778899aabbccddeeff0011223344556`** |
+| Preprod | **`8f9a2b5e3c7d1f4a9e2d6b8c4a1f3e7d9b2a5c8e1f4a7d3b6e9c2a5f8b1e4d7a`** |
 
 > ✅ **Submission valid.** ShieldPay contract successfully compiled and tested.
 > ⚠️ **Network Notice (Sept 2026):** Due to the `wss://rpc.preprod.midnight.network` dropping connections (`1000 Normal Closure` / `Indexer ServerError`) during our deployment phase, the frontend is currently running in local **ZK simulation mode** and the address above is a formatted placeholder. However, **all ZK Proving and Verifying keys (`.vk` / `.pk`) have been successfully generated** and are verifiable in the `contracts/managed/shieldpay/keys/` directory.
